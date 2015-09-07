@@ -13,6 +13,12 @@ gem 'haml', '~> 4.0.5'
 gem 'bootstrap-sass', '~> 3.2.0.2'
 gem 'paperclip', '~> 4.2'
 
+group :development do
+  gem 'better_errors'
+  gem 'did_you_mean'
+  gem "factory_girl_rails", "~> 4.0"
+end
+
 group :production do
   gem 'rails_12factor'
   gem 'puma'
