@@ -2,7 +2,13 @@ class StaffersController < ApplicationController
 	before_action :find_staffer, only: [:show, :edit, :update, :destroy]
 
 	def index
-		@staffers = Staffer.all.order("created_at DESC")
+		if params[:department].blank?
+	        @staffers = Staffer.all.order("created_at DESC")
+	       else
+		   @department_id = Department.find_by(name: params[:department]).id
+		   #loop through only the jobs with specific department_id
+		   @staffers = Staffer.where(department_id: @department_id).order("created_at DESC")
+		end
 	end
 
 	def show
@@ -40,7 +46,7 @@ class StaffersController < ApplicationController
 	private
 
 	def staffer_params
-		params.require(:staffer).permit(:first, :last, :username, :email, :phone, :profile)
+		params.require(:staffer).permit(:first, :last, :username, :email, :phone, :profile, :department_id)
 	end
 
 	def find_staffer
