@@ -1,7 +1,9 @@
 #staffers
 	- @staffers.each do |staffer|
 		.staffer
-			%h2= link_to staffer.first, staffer
+			= image_tag avatar_url(staffer)
+			%h= link_to staffer.first, staffer
+			%h= link_to staffer.last, staffer
 			%p= staffer.agency
 
 / = link_to "New Inovator", new_staffer_path
