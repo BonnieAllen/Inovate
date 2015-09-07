@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
@@ -61,8 +61,8 @@ body {
 	color: #1D976C !important;
 }
 
-#jobs {
-	.job {
+#staffers {
+	.staffer {
 		padding: 1em 0;
 		border-bottom: 1px solid rgba(250,250,250, 0.5);
 		h2 {
