@@ -46,7 +46,7 @@ class StaffersController < ApplicationController
 	private
 
 	def staffer_params
-		params.require(:staffer).permit(:first, :last, :username, :email, :phone, :profile, :department_id)
+		params.require(:staffer).permit(:first, :last, :username, :email, :phone, :profile, :department_id, :agency)
 	end
 
 	def find_staffer

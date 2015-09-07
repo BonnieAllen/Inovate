@@ -2,7 +2,7 @@
 	= f.collection_select :department_id, Department.all, :id, :name, {promt: "Choose a department" }, input_html: { class: "dropdown-toggle" }
 	= f.input :first, label: "First", input_html: { class: "form-control" }
 	= f.input :last, label: "Last", input_html: { class: "form-control" }
-	= f.input :department, label: "Department", input_html: { class: "form-control"}
+	= f.input :agency, label: "Agency", input_html: { class: "form-control"}
 	= f.input :email, label: "Email", input_html: { class: "form-control" }
 	= f.input :phone, label: "Phone", input_html: { class: "form-control"}
 	%br/

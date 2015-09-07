@@ -2,6 +2,6 @@
 	- @staffers.each do |staffer|
 		.staffer
 			%h2= link_to staffer.first, staffer
-			%p= staffer.email
+			%p= staffer.agency
 
 = link_to "New Inovator", new_staffer_path			
